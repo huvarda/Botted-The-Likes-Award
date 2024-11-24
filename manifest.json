@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Botted the Likes Award",
+  "description": "For when you just know someone botted the likes",
+  "version": "1.0",
+  "action": {
+    "default_popup": "jak.html",
+    "default_icon": "resources/award.png"
+  },
+
+	"web_accessible_resources": [{ 
+		"resources": [ "resources/*" ],
+		"matches": [ "*://x.com/*" ]
+	}],
+	
+  "content_scripts": [
+    {
+      "js": ["scripts/award_committee.js"],
+      "matches": [
+        "*://x.com/*"
+      ]
+    }
+  ]
+
+}
